@@ -8,10 +8,10 @@ import com.sylviavitoria.arquiteturahexagonal.core.domain.Usuario;
 @Component
 public class UsuarioConverter {
     public Usuario toDomain(UsuarioDTO usuarioDTO) {
-        return new Usuario(usuarioDTO.getId(), usuarioDTO.getEmail(), usuarioDTO.getSenha(), usuarioDTO.getAdmin());
+        return new Usuario(usuarioDTO.getId(), usuarioDTO.getNome(), usuarioDTO.getEmail(), usuarioDTO.getSenha(), usuarioDTO.getAdmin());
     }
 
     public UsuarioDTO toDTO(Usuario usuario) {
-        return new UsuarioDTO(usuario.getId(), null , usuario.getEmail(), usuario.getSenha(), usuario.getAdmin());
+        return new UsuarioDTO(usuario.getId(), usuario.getNome(), usuario.getEmail(), usuario.getSenha(), usuario.getAdmin());
     }
 }
